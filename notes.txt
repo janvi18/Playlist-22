@@ -1,0 +1,15 @@
+CRUD: 
+Login 
+    --> email 
+    --> password
+
+Signup
+    --> username
+    --> email
+    --> password
+
+Playlist
+    --> title
+    --> movieName
+    --> yearOfRelease
+    --> singer
