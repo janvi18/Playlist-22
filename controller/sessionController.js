@@ -1,5 +1,5 @@
 const validator = require("validator")
-const loginModel = require("../model/loginModel")
+const loginModel = require("../model/sessionModel")
 
 let users = []
 

@@ -1,7 +1,8 @@
 const express = require("express")
 const mongoose = require("mongoose")
 
-const loginContoller = require("./controller/loginController")
+const sessionController = require("./controller/sessionController")
+const playlistController = require("./controller/playlistSongController")
 
 const app = express()
 
@@ -9,10 +10,17 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
-//Login Api
-app.get("/signup", loginContoller.getAllUsers)
-app.post("/signup", loginContoller.signup)
-app.post("/login", loginContoller.login)
+//Session Api
+app.get("/signup", sessionController.getAllUsers)
+app.post("/signup", sessionController.signup)
+app.post("/login", sessionController.login)
+
+//playlist Api
+app.get("/playlist",playlistController.getAllPlaylist)
+app.post("/playlist",playlistController.addSong)
+app.put("/playlist",playlistController.updatePlaylist)
+app.delete("/playlist",playlistController.deletePlaylist)
+
 
 
 const localDb = "mongodb://localhost/playlist-22";

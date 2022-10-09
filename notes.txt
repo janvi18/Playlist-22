@@ -1,15 +1,26 @@
 CRUD: 
-Login 
+Login [ get & post ]
     --> email 
     --> password
 
-Signup
+Signup ( user )[ get & post ]
     --> username
     --> email
     --> password
 
-Playlist
+Playlist [ get & post ]
+    --> playlistId
+    --> playlistName
+
+Song [ get,post,delete ]
+    --> songId
+    --> playlistId [ fk ]
     --> title
     --> movieName
     --> yearOfRelease
     --> singer
+
+RemoveSongFromPlaylist
+    --> songId
+    --> playlistId
+    --> 
